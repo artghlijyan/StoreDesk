@@ -1,12 +1,15 @@
-﻿using System.Windows.Forms;
+﻿using Storedesk.Controllers;
+using System.Windows.Forms;
 
 namespace Storedesk.Forms
 {
     public partial class DeleteForm : Form
     {
-        public int CustomerId { get; private set; }
+        Controller controller;
+
         public DeleteForm()
         {
+            controller = new Controller();
             InitializeComponent();
         }
 
@@ -23,7 +26,9 @@ namespace Storedesk.Forms
             }
             else
             {
-                CustomerId = int.Parse(txtBox_CustomerId.Text);
+                DialogResult = DialogResult.OK;
+                int customerId = int.Parse(txtBox_CustomerId.Text);
+                controller.DeleteCustomerById(customerId);
                 this.Close();
             }
         }

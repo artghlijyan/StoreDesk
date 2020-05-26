@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grid_Customers = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
@@ -47,7 +42,6 @@
             this.dg_Products = new System.Windows.Forms.DataGridView();
             this.tb_Customers = new System.Windows.Forms.TabPage();
             this.tb_Sales = new System.Windows.Forms.TabPage();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Customers)).BeginInit();
             this.tb_Main.SuspendLayout();
             this.tb_Products.SuspendLayout();
@@ -56,45 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_Products)).BeginInit();
             this.tb_Customers.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productsToolStripMenuItem,
-            this.customerToolStripMenuItem,
-            this.salesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // productsToolStripMenuItem
-            // 
-            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.groupsToolStripMenuItem});
-            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.productsToolStripMenuItem.Text = "Products";
-            // 
-            // groupsToolStripMenuItem
-            // 
-            this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
-            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.groupsToolStripMenuItem.Text = "Groups";
-            // 
-            // customerToolStripMenuItem
-            // 
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.customerToolStripMenuItem.Text = "Customers";
-            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
-            // 
-            // salesToolStripMenuItem
-            // 
-            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.salesToolStripMenuItem.Text = "Sales";
             // 
             // grid_Customers
             // 
@@ -108,7 +63,7 @@
             // btn_Add
             // 
             this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Add.Location = new System.Drawing.Point(549, 371);
+            this.btn_Add.Location = new System.Drawing.Point(549, 395);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
             this.btn_Add.TabIndex = 2;
@@ -119,7 +74,7 @@
             // btn_Edit
             // 
             this.btn_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Edit.Location = new System.Drawing.Point(630, 371);
+            this.btn_Edit.Location = new System.Drawing.Point(630, 395);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(75, 23);
             this.btn_Edit.TabIndex = 3;
@@ -130,7 +85,7 @@
             // btn_Delete
             // 
             this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Delete.Location = new System.Drawing.Point(711, 371);
+            this.btn_Delete.Location = new System.Drawing.Point(711, 395);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(75, 23);
             this.btn_Delete.TabIndex = 4;
@@ -144,10 +99,10 @@
             this.tb_Main.Controls.Add(this.tb_Customers);
             this.tb_Main.Controls.Add(this.tb_Sales);
             this.tb_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_Main.Location = new System.Drawing.Point(0, 24);
+            this.tb_Main.Location = new System.Drawing.Point(0, 0);
             this.tb_Main.Name = "tb_Main";
             this.tb_Main.SelectedIndex = 0;
-            this.tb_Main.Size = new System.Drawing.Size(800, 426);
+            this.tb_Main.Size = new System.Drawing.Size(800, 450);
             this.tb_Main.TabIndex = 5;
             this.tb_Main.Click += new System.EventHandler(this.tb_Main_Click);
             // 
@@ -158,7 +113,7 @@
             this.tb_Products.Location = new System.Drawing.Point(4, 22);
             this.tb_Products.Name = "tb_Products";
             this.tb_Products.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Products.Size = new System.Drawing.Size(792, 400);
+            this.tb_Products.Size = new System.Drawing.Size(792, 424);
             this.tb_Products.TabIndex = 0;
             this.tb_Products.Text = "Products";
             this.tb_Products.UseVisualStyleBackColor = true;
@@ -169,7 +124,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 352);
+            this.panel2.Location = new System.Drawing.Point(3, 376);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(786, 45);
             this.panel2.TabIndex = 1;
@@ -209,7 +164,7 @@
             this.panel1.Controls.Add(this.dg_Products);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 343);
+            this.panel1.Size = new System.Drawing.Size(778, 367);
             this.panel1.TabIndex = 0;
             // 
             // dg_Products
@@ -218,7 +173,7 @@
             this.dg_Products.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_Products.Location = new System.Drawing.Point(0, 0);
             this.dg_Products.Name = "dg_Products";
-            this.dg_Products.Size = new System.Drawing.Size(778, 343);
+            this.dg_Products.Size = new System.Drawing.Size(778, 367);
             this.dg_Products.TabIndex = 0;
             // 
             // tb_Customers
@@ -230,7 +185,7 @@
             this.tb_Customers.Location = new System.Drawing.Point(4, 22);
             this.tb_Customers.Name = "tb_Customers";
             this.tb_Customers.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Customers.Size = new System.Drawing.Size(792, 400);
+            this.tb_Customers.Size = new System.Drawing.Size(792, 424);
             this.tb_Customers.TabIndex = 1;
             this.tb_Customers.Text = "Customers";
             this.tb_Customers.UseVisualStyleBackColor = true;
@@ -240,7 +195,7 @@
             this.tb_Sales.Location = new System.Drawing.Point(4, 22);
             this.tb_Sales.Name = "tb_Sales";
             this.tb_Sales.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Sales.Size = new System.Drawing.Size(792, 400);
+            this.tb_Sales.Size = new System.Drawing.Size(792, 424);
             this.tb_Sales.TabIndex = 2;
             this.tb_Sales.Text = "Sales";
             this.tb_Sales.UseVisualStyleBackColor = true;
@@ -251,12 +206,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tb_Main);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
             this.Text = "StoreDesk";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Customers)).EndInit();
             this.tb_Main.ResumeLayout(false);
             this.tb_Products.ResumeLayout(false);
@@ -265,17 +217,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_Products)).EndInit();
             this.tb_Customers.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem groupsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
         private System.Windows.Forms.DataGridView grid_Customers;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Edit;

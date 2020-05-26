@@ -20,9 +20,9 @@ namespace Storedesk.Controllers
             return dbContext.GetCustomers();
         }
 
-        internal void DeleteCustomerById(int customerId)
+        public void DeleteCustomerById(int customerId)
         {
-            throw new NotImplementedException();
+            dbContext.DeleteCustomerById(customerId);
         }
 
         public void AddCustomer(Customer customer)
@@ -30,9 +30,9 @@ namespace Storedesk.Controllers
             dbContext.AddCustomer(customer);
         }
 
-        internal void EditCustomer(Customer customer)
+        public void EditCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            dbContext.EditCustomer(customer);
         }
     }
 }
