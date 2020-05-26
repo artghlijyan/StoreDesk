@@ -5,9 +5,9 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace Storedesk.Interfaces.Impl
+namespace Storedesk.DbContext.Impl
 {
-    class DbContext : IDbContext
+    public class SqlDbContext : IDbContext
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 

@@ -1,25 +1,17 @@
-﻿using Storedesk.Models;
+﻿using Storedesk.Controllers;
+using Storedesk.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Storedesk.Forms
 {
     public partial class AddCustomerForm : Form
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string PhoneNumber { get; private set; }
+        Controller controller;
 
-        public int MyProperty { get; set; }
         public AddCustomerForm()
         {
+            controller = new Controller();
             InitializeComponent();
         }
 
@@ -30,18 +22,23 @@ namespace Storedesk.Forms
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBox_Name.Text) || 
-                string.IsNullOrEmpty(txtBox_Surname.Text) || 
+            if (string.IsNullOrEmpty(txtBox_Name.Text) ||
+                string.IsNullOrEmpty(txtBox_Surname.Text) ||
                 string.IsNullOrEmpty(txtBox_Phonenumber.Text))
             {
                 MessageBox.Show("All Fileds Must Be Filled");
             }
             else
             {
-                FirstName = txtBox_Name.Text;
-                LastName = txtBox_Surname.Text;
-                PhoneNumber = txtBox_Phonenumber.Text;
+                Customer customer = new Customer()
+                {
+                    FirstName = txtBox_Name.Text,
+                    LastName = txtBox_Surname.Text,
+                    PhoneNumber = txtBox_Phonenumber.Text
+                };
+
                 DialogResult = DialogResult.OK;
+                controller.AddCustomer(customer);
                 this.Close();
             }
         }

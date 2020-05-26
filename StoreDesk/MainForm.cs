@@ -1,36 +1,29 @@
-﻿using Storedesk.Interfaces;
-using Storedesk.Interfaces.Impl;
-using Storedesk.Forms;
+﻿using Storedesk.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Storedesk.Models;
+using Storedesk.Controllers;
 
 namespace Storedesk
 {
     public partial class MainForm : Form
     {
-        IDbContext dbContext;
+        Controller controller;
+
         public MainForm()
         {
-            dbContext = new DbContext();
+            controller = new Controller();
             InitializeComponent();
         }
 
-        private void InitializeDataGrid()
+        private void InitializeCustomersGrid()
         {
-            custmoerGrid.DataSource = dbContext.GetCustomers();
+            grid_Customers.DataSource = controller.GetCustomers();
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InitializeDataGrid();
+            InitializeCustomersGrid();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -38,8 +31,8 @@ namespace Storedesk
             DeleteForm deleteForm = new DeleteForm();
             deleteForm.ShowDialog();
             int customerId = deleteForm.CustomerId;
-            dbContext.DeleteCustomerById(customerId);
-            InitializeDataGrid();
+            controller.DeleteCustomerById(customerId);
+            InitializeCustomersGrid();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -50,11 +43,11 @@ namespace Storedesk
 
             if (customerForm.DialogResult == DialogResult.OK)
             {
-                customer.FirstName = customerForm.FirstName;
-                customer.LastName = customerForm.LastName;
-                customer.PhoneNumber = customerForm.PhoneNumber;
-                dbContext.AddCustomer(customer);
-                InitializeDataGrid();
+                InitializeCustomersGrid();
+            }
+            else
+            {
+                MessageBox.Show("Error");
             }
         }
 
@@ -72,15 +65,15 @@ namespace Storedesk
                 customer.PhoneNumber = customerForm.PhoneNumber;
             }
 
-            dbContext.EditCustomer(customer);
-            InitializeDataGrid();
+            controller.EditCustomer(customer);
+            InitializeCustomersGrid();
         }
 
         private void tb_Main_Click(object sender, EventArgs e)
         {
-            if (custmoerGrid.DataSource == null)
+            if (grid_Customers.DataSource == null)
             {
-                InitializeDataGrid();
+                InitializeCustomersGrid();
             }
         }
     }

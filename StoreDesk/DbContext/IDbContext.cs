@@ -1,7 +1,7 @@
 ﻿using Storedesk.Models;
 using System.Collections.Generic;
 
-namespace Storedesk.Interfaces
+namespace Storedesk.DbContext
 {
     interface IDbContext
     { 

@@ -33,28 +33,28 @@
             this.groupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.custmoerGrid = new System.Windows.Forms.DataGridView();
+            this.grid_Customers = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.tb_Main = new System.Windows.Forms.TabControl();
             this.tb_Products = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dg_Products = new System.Windows.Forms.DataGridView();
             this.tb_Customers = new System.Windows.Forms.TabPage();
             this.tb_Sales = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dg_Products = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.custmoerGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Customers)).BeginInit();
             this.tb_Main.SuspendLayout();
             this.tb_Products.SuspendLayout();
-            this.tb_Customers.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Products)).BeginInit();
+            this.tb_Customers.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,7 +80,7 @@
             // groupsToolStripMenuItem
             // 
             this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
-            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.groupsToolStripMenuItem.Text = "Groups";
             // 
             // customerToolStripMenuItem
@@ -96,14 +96,14 @@
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.salesToolStripMenuItem.Text = "Sales";
             // 
-            // custmoerGrid
+            // grid_Customers
             // 
-            this.custmoerGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.custmoerGrid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.custmoerGrid.Location = new System.Drawing.Point(3, 3);
-            this.custmoerGrid.Name = "custmoerGrid";
-            this.custmoerGrid.Size = new System.Drawing.Size(786, 362);
-            this.custmoerGrid.TabIndex = 1;
+            this.grid_Customers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Customers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grid_Customers.Location = new System.Drawing.Point(3, 3);
+            this.grid_Customers.Name = "grid_Customers";
+            this.grid_Customers.Size = new System.Drawing.Size(786, 362);
+            this.grid_Customers.TabIndex = 1;
             // 
             // btn_Add
             // 
@@ -163,12 +163,70 @@
             this.tb_Products.Text = "Products";
             this.tb_Products.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 352);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 45);
+            this.panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(706, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(625, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(544, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dg_Products);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(778, 343);
+            this.panel1.TabIndex = 0;
+            // 
+            // dg_Products
+            // 
+            this.dg_Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_Products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dg_Products.Location = new System.Drawing.Point(0, 0);
+            this.dg_Products.Name = "dg_Products";
+            this.dg_Products.Size = new System.Drawing.Size(778, 343);
+            this.dg_Products.TabIndex = 0;
+            // 
             // tb_Customers
             // 
             this.tb_Customers.Controls.Add(this.btn_Delete);
             this.tb_Customers.Controls.Add(this.btn_Edit);
             this.tb_Customers.Controls.Add(this.btn_Add);
-            this.tb_Customers.Controls.Add(this.custmoerGrid);
+            this.tb_Customers.Controls.Add(this.grid_Customers);
             this.tb_Customers.Location = new System.Drawing.Point(4, 22);
             this.tb_Customers.Name = "tb_Customers";
             this.tb_Customers.Padding = new System.Windows.Forms.Padding(3);
@@ -187,64 +245,6 @@
             this.tb_Sales.Text = "Sales";
             this.tb_Sales.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dg_Products);
-            this.panel1.Location = new System.Drawing.Point(6, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 343);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 352);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 45);
-            this.panel2.TabIndex = 1;
-            // 
-            // dg_Products
-            // 
-            this.dg_Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_Products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dg_Products.Location = new System.Drawing.Point(0, 0);
-            this.dg_Products.Name = "dg_Products";
-            this.dg_Products.Size = new System.Drawing.Size(778, 343);
-            this.dg_Products.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(544, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(625, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(706, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,13 +257,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.custmoerGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Customers)).EndInit();
             this.tb_Main.ResumeLayout(false);
             this.tb_Products.ResumeLayout(false);
-            this.tb_Customers.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg_Products)).EndInit();
+            this.tb_Customers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +276,7 @@
         private System.Windows.Forms.ToolStripMenuItem groupsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
-        private System.Windows.Forms.DataGridView custmoerGrid;
+        private System.Windows.Forms.DataGridView grid_Customers;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Delete;
